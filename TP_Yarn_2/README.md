@@ -148,7 +148,7 @@ the counting continues but i have shorterned it for convinience...
 # 1.8.1  Districts containing trees (very easy)
 
 
-[hadi.jamal-ahmad@hadoop-edge01 ~]$ yarn jar hadoop-examples-mapreduce-1.0-SNAPSHOT-jar-with-dependencies.jar Districts tree/tree.csv user/hadi.jamal-ahmad/181
+[hadi.jamal-ahmad@hadoop-edge01 ~]$ yarn jar hadoop-examples-mapreduce-1.0-SNAPSHOT-jar-with-dependencies.jar Districts trees.csv user/hadi.jamal-ahmad/181
 
 [hadi.jamal-ahmad@hadoop-edge01 ~]$ hdfs dfs -cat user/hadi.jamal-ahmad/181/part-r-00000
 3       1
@@ -172,7 +172,7 @@ the counting continues but i have shorterned it for convinience...
 
 # 1.8.2 Show all existing species (very easy)
 
- yarn jar hadoop-examples-mapreduce-1.0-SNAPSHOT-jar-with-dependencies.jar treeSpecies  tree/tree.csv user/hadi.jamal-ahmad/182
+ yarn jar hadoop-examples-mapreduce-1.0-SNAPSHOT-jar-with-dependencies.jar treeSpecies  trees.csv user/hadi.jamal-ahmad/182
 
 [hadi.jamal-ahmad@hadoop-edge01 ~]$ hdfs dfs -cat user/hadi.jamal-ahmad/182/part-r-00000
 araucana
@@ -223,7 +223,7 @@ x acerifolia
 
 # 1.8.3 Number of trees by kinds (easy)
 
-[hadi.jamal-ahmad@hadoop-edge01 ~]$ yarn jar hadoop-examples-mapreduce-1.0-SNAPSHOT-jar-with-dependencies.jar treeSpeciesCount  tree/tree.csv user/hadi.jamal-ahmad/183
+[hadi.jamal-ahmad@hadoop-edge01 ~]$ yarn jar hadoop-examples-mapreduce-1.0-SNAPSHOT-jar-with-dependencies.jar treeSpeciesCount  trees.csv user/hadi.jamal-ahmad/183
 
 [hadi.jamal-ahmad@hadoop-edge01 ~]$ hdfs dfs -cat user/hadi.jamal-ahmad/183/part-r-00000
 araucana        1
@@ -274,7 +274,7 @@ x acerifolia    11
 
 # 1.8.4 Maximum height per kind of tree using the average
 
-[hadi.jamal-ahmad@hadoop-edge01 ~]$ yarn jar hadoop-examples-mapreduce-1.0-SNAPSHOT-jar-with-dependencies.jar maxHeightSpecies  tree/tree.csv user/hadi.jamal-ahmad/184
+[hadi.jamal-ahmad@hadoop-edge01 ~]$ yarn jar hadoop-examples-mapreduce-1.0-SNAPSHOT-jar-with-dependencies.jar maxHeightSpecies  trees.csv user/hadi.jamal-ahmad/184
 
 [hadi.jamal-ahmad@hadoop-edge01 ~]$ hdfs dfs -cat user/hadi.jamal-ahmad/184/part-r-00000
 araucana        9.0
@@ -325,7 +325,7 @@ x acerifolia    45.0
 
 # 1.8.5 Sort the trees height from smallest to largest : using average
 
-[hadi.jamal-ahmad@hadoop-edge01 ~]$ yarn jar hadoop-examples-mapreduce-1.0-SNAPSHOT-jar-with-dependencies.jar treesSortedByHeight  tree/tree.csv user/hadi.jamal-ahmad/185
+[hadi.jamal-ahmad@hadoop-edge01 ~]$ yarn jar hadoop-examples-mapreduce-1.0-SNAPSHOT-jar-with-dependencies.jar treesSortedByHeight  trees.csv user/hadi.jamal-ahmad/185
 
 [hadi.jamal-ahmad@hadoop-edge01 ~]$ hdfs dfs -cat user/hadi.jamal-ahmad/185/part-r-00000
 3 - Fagus sylvatica (Fagaceae)  2.0
@@ -427,14 +427,14 @@ x acerifolia    45.0
 
 # 1.8.6 District containing the oldest tree (difficult)
 
-[hadi.jamal-ahmad@hadoop-edge01 ~]$ yarn jar hadoop-examples-mapreduce-1.0-SNAPSHOT-jar-with-dependencies.jar oldestTreeDistrictReduce  tree/tree.csv user/hadi.jamal-ahmad/186
+[hadi.jamal-ahmad@hadoop-edge01 ~]$ yarn jar hadoop-examples-mapreduce-1.0-SNAPSHOT-jar-with-dependencies.jar oldestTreeDistrictReduce  trees.csv user/hadi.jamal-ahmad/186
 
 [hadi.jamal-ahmad@hadoop-edge01 ~]$ hdfs dfs -cat user/hadi.jamal-ahmad/186/part-r-00000
 1601    5
 
 # 1.8.7 District containing the most trees (very difficult)
 
-[hadi.jamal-ahmad@hadoop-edge01 ~]$ yarn jar hadoop-examples-mapreduce-1.0-SNAPSHOT-jar-with-dependencies.jar maxTreesDistrict  tree/tree.csv user/hadi.jamal-ahmad/187
+[hadi.jamal-ahmad@hadoop-edge01 ~]$ yarn jar hadoop-examples-mapreduce-1.0-SNAPSHOT-jar-with-dependencies.jar maxTreesDistrict  trees.csv user/hadi.jamal-ahmad/187
 
 [hadi.jamal-ahmad@hadoop-edge01 ~]$ hdfs dfs -cat user/hadi.jamal-ahmad/187/part-r-00000
 
